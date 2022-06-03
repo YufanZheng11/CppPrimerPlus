@@ -38,3 +38,11 @@ int a = 210 % 10;
 // Bad - causes a compile-time error.
 int b = 20.1 % 10.2
 ```
+
+### Potential Numeric Conversion Problems
+| Conversion Type | Potential Problems |
+| ---- | ---- |
+| Bigger floating-point type to smaller floating-point type, such as double to float | Loss of precision (significant figures); value might be out of range for target type, in which case result is undefined.|
+| Floating-point type to integer type | Loss of fractional part; original value might be out of range for target type, in which case result is undefined. |
+| Bigger integer type to smaller integer type, such as long to short | Original value might be out of range for target, type; typically just the low-order bytes are copied. |
+
