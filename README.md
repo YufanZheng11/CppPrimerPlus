@@ -1,4 +1,4 @@
-## C++ Primer Plus Sample Code and Exercise Solutions
+## C++ Primer Plus - Tutorial Sample Code and Exercise Solutions
 
 A code repository records my learning of **C++ Primer Plus**
 
