@@ -6,6 +6,7 @@ cout.setf(ios_base::fixed, ios_base::floatfield); // fixed-point
 ```
 
 ### Floating value precision
+Remember, floating-point constants are type **double by default**.
 - float can guarantee about 6 precision
 - double can guarantee about 15 precision
 ```c++
