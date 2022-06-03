@@ -1,8 +1,13 @@
 ## Notes
 
-**Floating value precision**
-- float can guarantee 6 precision
-- double can guarantee 15 precision
+### std::cout display fixed floating precisions
+```c++
+cout.setf(ios_base::fixed, ios_base::floatfield); // fixed-point
+```
+
+### Floating value precision
+- float can guarantee about 6 precision
+- double can guarantee about 15 precision
 ```c++
 #include <iostream>
 
