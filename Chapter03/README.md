@@ -35,6 +35,6 @@ Both operands must be integer types; using the % operator with floating-point va
 ```c++
 // Good
 int a = 210 % 10;
-// Bad
+// Bad - causes a compile-time error.
 int b = 20.1 % 10.2
 ```
