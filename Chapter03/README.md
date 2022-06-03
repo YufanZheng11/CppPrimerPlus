@@ -68,3 +68,13 @@ fastest for that type.
 9.0 / 5
 ```
 Divides 9.0 by 5. Because 9.0 is type double, the program converts 5 to type double before it does the division.
+
+### Type casts
+```c++
+(long) thorn // returns a type long conversion of thorn 
+long (thorn) // returns a type long conversion of thorn
+
+static_cast<typeName> (value) // converts value to typeName type
+```
+Stroustrup felt that the traditional C-style type cast is dangerously unlimited in its possibilities.
+The static_cast<> operator is more restrictive than the traditional type cast.
