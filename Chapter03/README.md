@@ -10,17 +10,11 @@ Remember, floating-point constants are type **double by default**.
 - float can guarantee about 6 precision
 - double can guarantee about 15 precision
 ```c++
-#include <iostream>
+float a = 2.34e+22f;
+float b = a + 1.0f;
 
-int main()
-{
-    using namespace std;
-    float a = 2.34e+22f;
-    float b = a + 1.0f;
-
-    cout << "a = " << a << endl;
-    cout << "b - a = " << b - a << endl;
-}
+cout << "a = " << a << endl;
+cout << "b - a = " << b - a << endl;
 ```
 
 The program in Listing 3.9 takes a number, adds 1, and then subtracts the original number.That should result in a value of 1. Does it? Here is the output from the program in Listing 3.9 for one system:
@@ -46,19 +40,12 @@ int b = 20.1 % 10.2
 | Floating-point type to integer type | Loss of fractional part; original value might be out of range for target type, in which case result is undefined. |
 | Bigger integer type to smaller integer type, such as long to short | Original value might be out of range for target, type; typically just the low-order bytes are copied. |
 ```c++
-#include <iostream>
-
-int main()
-{
-    using namespace std;
-    cout.setf(ios_base::fixed, ios_base::floatfield);
-    float tree = 3;
-    int guess = 3.9832;
-    int debt = 7.2E12;
-    cout << "tree = " << tree << endl;
-    cout << "guess = " << guess << endl;
-    cout << "debt = " << debt << endl;
-}
+float tree = 3;
+int guess = 3.9832;
+int debt = 7.2E12;
+cout << "tree = " << tree << endl;
+cout << "guess = " << guess << endl;
+cout << "debt = " << debt << endl;
 ```
 ```c++
 tree = 3.000000
