@@ -20,7 +20,7 @@ cout << "b - a = " << b - a << endl;
 The program in Listing 3.9 takes a number, adds 1, and then subtracts the original number.That should result in a value of 1. Does it? Here is the output from the program in Listing 3.9 for one system:
 ```
 a = 2.34e+022
-b - a = 0 // ---- float ignore the change of 1 at very end
+b - a = 0           // ---- float ignore the change of 1 at very end
 ```
 The problem is that 2.34E+22 represents a number with 23 digits to the left of the decimal. By adding 1, you are attempting to add 1 to the 23rd digit in that number. But type float can represent only the first 6 or 7 digits in a number, so trying to change the 23rd digit has no effect on the value.
 
@@ -52,3 +52,19 @@ tree = 3.000000
 guess = 3       // fraction part missing
 debt = 4098     // out of range
 ```
+
+### Integral promotions 
+```c++
+short chickens = 20; // line 1 
+short ducks = 35; // line 2 
+short fowl = chickens + ducks; // line 3
+```
+To execute the statement on line 3, a C++ program takes the values of chickens and ducks and **converts 
+both to int**. Then the program **converts the result back to type short** because the answer is assigned to a 
+type short variable.You might find this a bit round about, but it does make sense.The int type is 
+generally chosen to be the computer’s most natural type, which means the computer probably does calculations 
+fastest for that type.
+```c++
+9.0 / 5
+```
+Divides 9.0 by 5. Because 9.0 is type double, the program converts 5 to type double before it does the division.
