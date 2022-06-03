@@ -78,3 +78,24 @@ static_cast<typeName> (value) // converts value to typeName type
 ```
 Stroustrup felt that the traditional C-style type cast is dangerously unlimited in its possibilities.
 The static_cast<> operator is more restrictive than the traditional type cast.
+
+### auto Declarations in C++11
+use auto instead of the type name in an initializing declaration, 
+and the compiler assigns the variable the same type as that of the initializer:
+```c++
+auto n = 100; // n is int
+auto x = 1.5; // x is double 
+auto y = 1.3e12L; // y is long double
+```
+Automatic type deduction becomes much more useful when dealing with complicated types, 
+such as those in the STL (Standard Template Library). For example, C++98 code might have this:
+```c++
+std::vector<double> scores; 
+std::vector<double>::iterator pv = scores.begin();
+```
+C++11 allows you to write this instead:
+```c++
+
+std::vector<double> scores; 
+auto pv = scores.begin();
+```
