@@ -1,9 +1,4 @@
-//
-// Created by Yufan Zheng on 3/6/2022.
-//
-
 #include <iostream>
-
 
 int main()
 {

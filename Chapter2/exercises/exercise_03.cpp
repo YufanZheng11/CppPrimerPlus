@@ -4,7 +4,6 @@ using namespace std;
 void PrintBlindMice();
 void PrintMiceRun();
 
-
 int main()
 {
     PrintBlindMice();
