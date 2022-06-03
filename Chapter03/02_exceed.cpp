@@ -17,6 +17,7 @@ int main()
 
     sam = ZERO;
     sue = ZERO;
+
     cout << "Sam has " << sam << " dollars and Sue has " << sue << " dollars deposited" << endl;
     sam--;
     sue--;
