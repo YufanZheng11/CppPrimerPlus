@@ -1,4 +1,6 @@
-## C++ Primer Plus Study and Exercises
+## C++ Primer Plus Sample Code and Exercise Solutions
+
+A code repository records my learning of **C++ Primer Plus**
 
 |     Chapter      | Sample Code | Exercise                                  |
 |:----------------:| ---- |-------------------------------------------|
