@@ -57,7 +57,7 @@ the following attempts to assign a **memory address (!!!!)** to shirt_size:
 char shirtSize = "S";   // ----- shirtSize is the memory address
 ```
 
-## Problems for cin string
+### Problems for cin string
 - The cin technique is to use whitespace—spaces, tabs, and newlines—to delineate a string.
 This means cin reads just one word when it gets input for a character array. 
 - the input string might turn out to be longer than the destination array. Using cin as this example did offers 
