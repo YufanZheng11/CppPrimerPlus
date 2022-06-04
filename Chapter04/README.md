@@ -36,11 +36,15 @@ char slifs[4] {'h', 'i', 1122011, '\0'};    // not allowed
 char tlifs[4] {'h', 'i', 112, '\0'};        // allowed
 ```
 
-### string
+### string vs char
 This character, written \0, is the character with ASCII code 0, and it serves to mark the string’s end.
 ```c++
 char dog[8] = {'b', 'e', 'a', 'u', 'x', ' ', 'I', 'I'};     // not a string! 
 char cat[8] = {'f', 'a', 't', 'e', 's', 's', 'a', '\0'};    // a string!
+```
+```c++
+char bird[11] = "Mr. Cheeps";   // the \0 is understood 
+char fish[] = "Bubbles";        // let the compiler count --- recommend
 ```
 - '' -- char
 - "" -- string
