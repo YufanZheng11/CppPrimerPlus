@@ -91,3 +91,8 @@ cin.get(dessert, AR_SIZE).get();
 - Because the first call leaves the newline character in the input queue, that newline character is the first character the second call sees.
 - Thus,get() concludes that it’s reached the end of line without having found anything to read.Without help,get() just can’t get past that newline character.
 
+### Why use get() instead of getline()?
+- First, older implementations may not have getline(). 
+- Second, get() lets you be a bit more careful. 
+  - Suppose, for example, you used get() to read a line into an array. How can you tell if it read the whole line rather than stopped because the array was filled? 
+  - Look at the next input character. If it is a newline character, then the whole line was read. If it is not a newline character, then there is still
