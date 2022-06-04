@@ -70,7 +70,7 @@ no protection against placing a longer string in a shorter array.
     - it reaches this numeric limit or 
     - when it reads a newline character, whichever comes first.
 ```c++
-// getline
+// cin.getline()
 char name[AR_SIZE];
 char dessert[AR_SIZE];
 
@@ -79,4 +79,15 @@ cin.getline(dessert, AR_SIZE);
 ```
 - get()
   - leaves newline character in the input queue
+```c++
+// cin.get()
+char name[AR_SIZE];
+char dessert[AR_SIZE];
+
+// ------ pay attention to the .get() at the end
+cin.get(name, AR_SIZE).get();
+cin.get(dessert, AR_SIZE).get();
+```
+- Because the first call leaves the newline character in the input queue, that newline character is the first character the second call sees.
+- Thus,get() concludes that it’s reached the end of line without having found anything to read.Without help,get() just can’t get past that newline character.
 
