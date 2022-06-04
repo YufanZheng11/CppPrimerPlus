@@ -2,7 +2,7 @@
 
 A code repository records my learning of **C++ Primer Plus**
 
-|     Chapter      | Sample Code |           My Notes            | Exercise                                  |
-|:----------------:| ---- |:-----------------------------:|-------------------------------------------|
-| [02](Chapter02)  | [Setting Out to C++](Chapter02) |                               | [Exercise Solutions](Chapter02/exercises) |
-| [03](Chapter03)  | [Dealing with Data](Chapter03) |  [Note](Chapter03/README.md)  | [Exercise Solutions](Chapter03/exercises) | 
+|     Chapter      | Sample Code |           My Notes            | Exercise                                  | Done Date |
+|:----------------:| ---- |:-----------------------------:|-------------------------------------------| ---- |
+| [02](Chapter02)  | [Setting Out to C++](Chapter02) |                               | [Exercise Solutions](Chapter02/exercises) | 2022-06-02 |
+| [03](Chapter03)  | [Dealing with Data](Chapter03) |  [Note](Chapter03/README.md)  | [Exercise Solutions](Chapter03/exercises) | 2022-06-03 |
