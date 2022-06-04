@@ -35,3 +35,20 @@ long plifs[] = {25, 92, 3.0};               // not allowed
 char slifs[4] {'h', 'i', 1122011, '\0'};    // not allowed 
 char tlifs[4] {'h', 'i', 112, '\0'};        // allowed
 ```
+
+### string
+This character, written \0, is the character with ASCII code 0, and it serves to mark the string’s end.
+```c++
+char dog[8] = { 'b', 'e', 'a', 'u', 'x', ' ', 'I', 'I'};    // not a string! 
+char cat[8] = {'f', 'a', 't', 'e', 's', 's', 'a', '\0'};    // a string!
+```
+- '' -- char
+- "" -- string
+the following statement assigns the value 83 to shirt_size:
+```c++
+char shirtSize = 'S';   // ----- shirtSize is 83 or char 'S'
+```
+the following attempts to assign a **memory address (!!!!)** to shirt_size:
+```c++
+char shirtSize = "S";   // ----- shirtSize is the memory address
+```
