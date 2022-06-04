@@ -62,3 +62,13 @@ char shirtSize = "S";   // ----- shirtSize is the memory address
 This means cin reads just one word when it gets input for a character array. 
 - the input string might turn out to be longer than the destination array. Using cin as this example did offers 
 no protection against placing a longer string in a shorter array.
+
+### Reading String Input a Line at a Time
+- getline()
+  - discards the newline character
+  - The getline() member function stops reading input when 
+    - it reaches this numeric limit or 
+    - when it reads a newline character, whichever comes first.
+- get()
+  - leaves newline character in the input queue
+
