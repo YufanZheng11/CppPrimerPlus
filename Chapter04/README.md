@@ -69,6 +69,14 @@ no protection against placing a longer string in a shorter array.
   - The getline() member function stops reading input when 
     - it reaches this numeric limit or 
     - when it reads a newline character, whichever comes first.
+```c++
+// getline
+char name[AR_SIZE];
+char dessert[AR_SIZE];
+
+cin.getline(name, AR_SIZE);
+cin.getline(dessert, AR_SIZE);
+```
 - get()
   - leaves newline character in the input queue
 
