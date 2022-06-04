@@ -39,7 +39,7 @@ char tlifs[4] {'h', 'i', 112, '\0'};        // allowed
 ### string
 This character, written \0, is the character with ASCII code 0, and it serves to mark the string’s end.
 ```c++
-char dog[8] = { 'b', 'e', 'a', 'u', 'x', ' ', 'I', 'I'};    // not a string! 
+char dog[8] = {'b', 'e', 'a', 'u', 'x', ' ', 'I', 'I'};     // not a string! 
 char cat[8] = {'f', 'a', 't', 'e', 's', 's', 'a', '\0'};    // a string!
 ```
 - '' -- char
