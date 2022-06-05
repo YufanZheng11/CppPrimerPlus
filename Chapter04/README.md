@@ -96,3 +96,17 @@ cin.get(dessert, AR_SIZE).get();
 - Second, get() lets you be a bit more careful. 
   - Suppose, for example, you used get() to read a line into an array. How can you tell if it read the whole line rather than stopped because the array was filled? 
   - Look at the next input character. If it is a newline character, then the whole line was read. If it is not a newline character, then there is still
+
+### char[] init
+```c++
+char charr[20];
+string str;
+
+// ------- Init charr[20], the \0 will be randomly located
+cout << "Length of string in charr before input: " << strlen(charr) << endl;
+cout << "Length of string in str before input: " << str.size() << endl;
+```
+```
+Length of string in charr before input: 6
+Length of string in str before input: 0
+```
