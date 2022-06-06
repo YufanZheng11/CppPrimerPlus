@@ -110,3 +110,28 @@ cout << "Length of string in str before input: " << str.size() << endl;
 Length of string in charr before input: 6
 Length of string in str before input: 0
 ```
+
+### struct definition with inits
+```c++
+struct perks {
+  int key_number;
+  char car[12];
+} mr_smith, ms_jones; // two perks variables
+```
+```c++
+struct perks {
+  int key_number;
+  char car[12]; 
+} mr_glitz =
+{
+  7,            // value for mr_glitz.key_number member 
+  "Packard"     // value for mr_glitz.car member
+};
+```
+```c++
+struct // no tag 
+{
+  int x; // 2 members
+  int y;
+} position; // a structure variable
+```
