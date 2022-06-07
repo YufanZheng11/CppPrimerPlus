@@ -161,3 +161,44 @@ if (prize.type == 1)
 else
     cin >> prize.id_val.id_char;
 ```
+
+### Enumerations
+```c++
+enum spectrum {red, orange, yellow, green, blue, violet, indigo, ultraviolet};
+```
+- It makes spectrum the name of a new type; spectrum is termed an enumeration, much as a struct variable is called a structure.
+- It establishes red, orange, yellow, and so on, as symbolic constants for the integer values 0–7.These constants are called enumerators.
+```c++
+spectrum band;          // band a variable of type spectrum
+
+band = blue;            // valid, blue is an enumerator 
+band = 2000;            // invalid, 2000 not an enumerator
+
+band = orange;          // valid
+++band;                 // not valid, ++ discussed in Chapter 5 
+band = orange + red;    // not valid, but a little tricky
+
+int color = blue;       // valid, spectrum type promoted to int
+band = 3;               // invalid, int not converted to spectrum 
+color = 3 + red;        // valid, red converted to int
+
+band = spectrum(3);     // typecast 3 to type spectrum
+band = spectrum(40003); // undefined
+```
+
+### Setting Enumerator Values
+```c++
+enum bits{one = 1, two = 2, four = 4, eight = 8};
+
+enum bigstep{first, second = 100, third};   // third is 101
+
+enum {zero, null = 0, one, numero_uno = 1}; // zero & null are 0s and one and numero_uno are 1
+```
+
+### Value Ranges for Enumeration
+```c++
+enum bits{one = 1, two = 2, four = 4, eight = 8}; 
+bits myflag;
+
+myflag = bits(6); // valid, because 6 is in bits range
+```
