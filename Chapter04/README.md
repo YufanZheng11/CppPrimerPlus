@@ -221,3 +221,29 @@ This kind of error can produce some of the most insidious and hard-to-trace bugs
 **!!!!!!! Caution !!!!!!!**
 - Pointer Golden Rule: 
   - Always initialize a pointer to a definite and appropriate address before you apply the dereferencing operator (*) to it.
+
+### Memory Allocation
+- Variables -- Stack
+- new ***** -- Heap
+
+### delete pointers
+- use delete by following it with a pointer to a block of memory originally allocated with new:
+```c++
+int * ps = new int; // allocate memory with new
+. . .               // use the memory
+delete ps;          // free memory with delete when done
+```
+**Rules**
+- Always use new & delete after no longer using it
+  - If no, will potentially result in memory leak -- memory that has been allocated but can no longer be used.
+- should not attempt to free a block of memory that you have previously freed.
+- cannot use delete to free memory created by declaring ordinary variables:
+```c++
+int* ps = new int;  // ok
+delete ps;          // ok
+delete ps;          // -- not ok
+
+int jugs = 5;       // ok
+int* pi = &jugs;    // ok
+delete pi;          // -- not ok
+```
