@@ -233,11 +233,6 @@ int * ps = new int; // allocate memory with new
 . . .               // use the memory
 delete ps;          // free memory with delete when done
 ```
-**Rules**
-- Always use new & delete after no longer using it
-  - If no, will potentially result in memory leak -- memory that has been allocated but can no longer be used.
-- should not attempt to free a block of memory that you have previously freed.
-- cannot use delete to free memory created by declaring ordinary variables:
 ```c++
 int* ps = new int;  // ok
 delete ps;          // ok
@@ -247,3 +242,16 @@ int jugs = 5;       // ok
 int* pi = &jugs;    // ok
 delete pi;          // -- not ok
 ```
+```c++
+int * psome = new int [10]; // get a block of 10 ints
+...
+delete [] psome;            // free a dynamic array
+```
+
+**Rules when use new and delete:**
+- Always delete at the end of new
+- Don’t use delete to free memory that new didn’t allocate.
+- Don’t use delete to free the same block of memory twice in succession. 
+- Use delete [] if you used new [] to allocate an array.
+- Use delete (no brackets) if you used new to allocate a single entity.
+- It’s safe to apply delete to the null pointer (nothing happens).
