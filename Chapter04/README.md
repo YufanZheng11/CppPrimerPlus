@@ -135,3 +135,29 @@ struct // no tag
   int y;
 } position; // a structure variable
 ```
+
+### Union
+- A union is a data format that can hold different data types but only one type at a time.
+- the size of the union is the size of its largest member.
+- !!! -- One use for a union is to save space when a data item can use two or more formats but never simultaneously.
+```c++
+struct widget {
+  char brand[20]; 
+  int type; 
+};
+
+union id
+{
+    long id_num;
+    char id_char[20];
+} id_val;
+
+...
+widget prize; 
+...
+
+if (prize.type == 1)
+    cin >> prize.id_val.id_num;
+else
+    cin >> prize.id_val.id_char;
+```
